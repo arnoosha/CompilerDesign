@@ -9,25 +9,24 @@ The compiler takes arithmetic and control-flow expressions as input, parses them
 ## Components
 
 - **Lexer**  
-  The lexical analyzer (`Lexer.cpp`, `Lexer.h`) tokenizes the input source code into a sequence of tokens such as identifiers, numbers, operators, and keywords:contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}.
+  The lexical analyzer (`Lexer.cpp`, `Lexer.h`) tokenizes the input source code into a sequence of tokens such as identifiers, numbers, operators, and keywords
 
 - **Parser**  
-  The parser (`Parser.cpp`, `Parser.h`) constructs an Abstract Syntax Tree (AST) from the token stream. It supports variable declarations, assignments, arithmetic expressions, conditions, loops, and if-elif-else control flow constructs:contentReference[oaicite:2]{index=2}:contentReference[oaicite:3]{index=3}.
+  The parser (`Parser.cpp`, `Parser.h`) constructs an Abstract Syntax Tree (AST) from the token stream. It supports variable declarations, assignments, arithmetic expressions, conditions, loops, and if-elif-else control flow constructs
 
 - **AST (Abstract Syntax Tree)**  
-  The AST is defined in `AST.h` and represents the hierarchical structure of the input program, with node types for expressions, declarations, binary operations, conditions, and control flow:contentReference[oaicite:4]{index=4}.
+  The AST is defined in `AST.h` and represents the hierarchical structure of the input program, with node types for expressions, declarations, binary operations, conditions, and control flow
 
 - **Semantic Analysis**  
-  The semantic analyzer (`Sema.cpp`) traverses the AST to detect semantic errors such as undeclared variables, duplicate declarations, invalid assignments, and division by zero:contentReference[oaicite:5]{index=5}.
-
+  The semantic analyzer (`Sema.cpp`) traverses the AST to detect semantic errors such as undeclared variables, duplicate declarations, invalid assignments, and division by zero
 - **Code Generation**  
-  The code generator (`CodeGen.cpp`, `CodeGen.h`) traverses the AST and produces LLVM IR. This IR can be further optimized and executed using LLVM’s toolchain:contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}.
+  The code generator (`CodeGen.cpp`, `CodeGen.h`) traverses the AST and produces LLVM IR. This IR can be further optimized and executed using LLVM’s toolchain
 
 - **Driver**  
-  The main driver (`GSM.cpp`) integrates all components. It reads input expressions, invokes the lexer and parser, checks for errors, performs semantic analysis, and if successful, generates and outputs LLVM IR:contentReference[oaicite:8]{index=8}.
+  The main driver (`GSM.cpp`) integrates all components. It reads input expressions, invokes the lexer and parser, checks for errors, performs semantic analysis, and if successful, generates and outputs LLVM IR
 
 - **Build Configuration**  
-  The project uses CMake (`CMakeLists.txt`) to configure and build the compiler with LLVM libraries:contentReference[oaicite:9]{index=9}.
+  The project uses CMake (`CMakeLists.txt`) to configure and build the compiler with LLVM libraries
 
 ## Key Features
 
